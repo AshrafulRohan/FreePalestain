@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Criminal Shooting Game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-header">
+        <div class="solidarity-logo">
+            <svg viewBox="0 0 100 60" width="150" height="90">
+                <rect x="0" y="0" width="100" height="20" fill="black"/>
+                <rect x="0" y="20" width="100" height="20" fill="white"/>
+                <rect x="0" y="40" width="100" height="20" fill="#007A3D"/>
+                <polygon points="0,0 30,30 0,60" fill="#CE1126"/>
+                <text x="50" y="35" text-anchor="middle" fill="black" font-size="8">Free Palestine</text>
+            </svg>
+        </div>
+        
+        <div class="game-title">
+            <h1>CRIMINAL HUNT</h1>
+            <div class="title-decoration"></div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="header">
+            <div class="score-board">
+                <span class="stat-icon">🏆</span> <span id="score">0</span> |
+                <span class="stat-icon">⏱️</span> <span id="time">60</span>s |
+                <span class="stat-icon">📈</span> <span id="level">1</span>
+            </div>
+            <div class="high-score">
+                <span class="stat-icon">👑</span> <span id="high-score">0</span>
+            </div>
+        </div>
+        
+        <div id="target-area"></div>
+        
+        <div class="controls">
+            <button id="start-btn" class="game-btn">🚀 Start Game</button>
+            <button id="pause-btn" class="game-btn" disabled>⏸️ Pause</button>
+            <select id="difficulty" class="game-select">
+                <option value="easy">😊 Easy</option>
+                <option value="medium">😐 Medium</option>
+                <option value="hard">😈 Hard</option>
+            </select>
+        </div>
+        
+        <div class="powerups">
+            <div class="powerup-item" id="rapid-fire">🔥 Rapid Fire (3)</div>
+            <div class="powerup-item" id="time-freeze">⏱️ Time Freeze (2)</div>
+        </div>
+    </div>
+
+    <div class="creator-credit">
+        Game developed by <span class="creator-name">Ashraful Hasan</span> | © 2025
+    </div>
+
+    <audio id="shot-sound" src="shot.mp3" preload="auto"></audio>
+    <audio id="hit-sound" src="hit.mp3" preload="auto"></audio>
+    <audio id="powerup-sound" src="powerup.mp3" preload="auto"></audio>
+    <audio id="levelup-sound" src="levelup.mp3" preload="auto"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
